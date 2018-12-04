@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/sdd-manifesto/manifesto/compare/0.9.13...HEAD)
 
+### Added
+
+-   Move legal files over to app. [a4d738a](https://github.com/sdd-manifesto/manifesto-app/commit/a4d738ae4d96aeb0cf278175a7fc617dfe24c293)
+
 ## [0.9.13](https://github.com/sdd-manifesto/manifesto/compare/0.9.12...0.9.13) - 2018-12-04
 
 ## [0.9.12](https://github.com/sdd-manifesto/manifesto/compare/0.9.11...0.9.12) - 2018-11-29
