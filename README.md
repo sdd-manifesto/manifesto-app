@@ -1,2 +1,3 @@
-# sdd-manifest/manifesto-app
+# sdd-manifesto/manifesto-app
 
+This repository hosts the web application serving https://sdd-manifesto.org.
