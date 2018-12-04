@@ -16,8 +16,6 @@ export async function getFile(name: string, process: (content: string) => Promis
     }
 }
 
-<<<<<<< HEAD
-=======
 export async function getLocalFile(name: string, process: (content: string) => Promise<string> = MarkdownConverter): Promise<string> {
     if (files.has(name)) {
         return files.get(name);
@@ -28,5 +26,4 @@ export async function getLocalFile(name: string, process: (content: string) => P
     }
 }
 
->>>>>>> Move legal files over to app
 export const MarkdownConverter = async (content: string) => converter.makeHtml(content);
