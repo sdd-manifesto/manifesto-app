@@ -19,7 +19,14 @@ homeRouter.use((req, res, next) => {
 });
 
 homeRouter.get("/", async (req: express.Request, res: express.Response) => {
+    await renderHome(req, res);
+});
 
+homeRouter.get("/:language", async (req: express.Request, res: express.Response) => {
+    await renderHome(req, res);
+});
+
+async function renderHome(req: express.Request, res: express.Response): Promise<void> {
     const db = await database();
     const sigs = db.collection("signatures");
 
@@ -29,7 +36,10 @@ homeRouter.get("/", async (req: express.Request, res: express.Response) => {
         p.ago = moment(p.ts).fromNow();
     });
     const message = req.flash("info");
-    const html = await getFile("README.md", async content => MarkdownConverter(content.split("\n").slice(2).join("\n")));
+    const fileName = req.params.language ? `README_${req.params.language}.md` : "README.md";
+
+    const html = await getFile(fileName, async content =>
+        MarkdownConverter(content.split("\n").slice(2).join("\n")));
     const state = nonce();
 
     req.session.state = state;
@@ -42,7 +52,7 @@ homeRouter.get("/", async (req: express.Request, res: express.Response) => {
         auth0: Auth0Config,
         state,
     });
-});
+}
 
 homeRouter.get("/signatures.html", async (req: express.Request, res: express.Response) => {
 
