@@ -22,7 +22,7 @@ homeRouter.get("/", async (req: express.Request, res: express.Response) => {
     await renderHome(req, res);
 });
 
-homeRouter.get("/:language", async (req: express.Request, res: express.Response) => {
+homeRouter.get("/i18n/:language", async (req: express.Request, res: express.Response) => {
     await renderHome(req, res);
 });
 
