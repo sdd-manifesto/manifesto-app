@@ -64,7 +64,7 @@
     "passport-auth0": "^1.1.0",
     "remote-git-tags": "^2.0.0",
     "semver": "^5.6.0",
-    "showdown": "^1.9.0",
+    "showdown": "^1.9.1",
     "source-map-support": "^0.5.9"
   },
   "devDependencies": {
