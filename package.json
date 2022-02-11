@@ -51,7 +51,7 @@
     "dateformat": "^3.0.3",
     "debug": "^4.1.0",
     "express": "^4.16.0",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^5.3.1",
     "express-http-to-https": "^1.1.4",
     "express-session": "^1.15.6",
     "fs-extra": "^7.0.1",
